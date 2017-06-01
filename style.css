@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+.pass {
+    -webkit-animation: pass-fade 1s;
+    -moz-animation: pass-fade 1s;
+    -o-animation: pass-fade 1s;
+    animation: pass-fade 1s;
+    border-radius: 5px;
+}
+
+.fail {
+    -webkit-animation: fail-fade 1s;
+    -moz-animation: fail-fade 1s;
+    -o-animation: fail-fade 1s;
+    animation: fail-fade 1s;
+    border-radius: 5px;
+}
+
+@-webkit-keyframes pass-fade {
+    from { background-color: green; }
+    to { background-color: transparent; }
+}
+
+@-moz-keyframes pass-fade {
+    from { background-color: green; }
+    to { background-color: transparent; }
+}
+
+@-o-keyframes pass-fade {
+    from { background-color: green; }
+    to { background-color: transparent; }
+}
+
+@keyframes pass-fade {
+    from { background-color: green; }
+    to { background-color: transparent; }
+}
+
+@-webkit-keyframes fail-fade {
+    from { background-color: red; }
+    to { background-color: transparent; }
+}
+
+@-moz-keyframes fail-fade {
+    from { background-color: red; }
+    to { background-color: transparent; }
+}
+
+@-o-keyframes fail-fade {
+    from { background-color: red; }
+    to { background-color: transparent; }
+}
+
+@keyframes fail-fade {
+    from { background-color: red; }
+    to { background-color: transparent; }
+}
+
+
+html{
+  background-color: #324044;
+
+  /* Prevent selection of text so bits don't mess up */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version */
+
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#center{
+  font-size: 30vw;
+}
+
+.bit{
+  color: transparent;
+  border-radius: 1vw;
+  display: inline-block;
+  margin: 1vw;
+
+  transition: background-color 500ms;
+
+  /* Off by default*/
+  background-color: #151515;
+  border: #F4E4CD solid 5px
+}
+
+.bit::before{
+  content: "a";
+}
+
+@media all and (orientation: landscape) {
+  .bit {
+    font-size: 100%;
+  }
+}
+
+@media all and (orientation: portrait) {
+  .bit {
+    font-size: 100%;
+  }
+}
+
+.on{
+  background-color: #F4E4CD;
+  border: #151515 solid 5px
+}
+
+#infoBar{
+  width: 100%;
+  top: 0px;
+  position: absolute;
+  padding: 5px;
+  font-size: 5vh;
+  background-color: #669aa9;
+}
+
+span{
+  padding: 0 2%;
+}
+
+#restart{
+  text-decoration: underline;
+}
